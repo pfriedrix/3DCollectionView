@@ -10,9 +10,12 @@
 		BAB48E96294B204F002A76E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB48E95294B204F002A76E6 /* AppDelegate.swift */; };
 		BAB48E98294B204F002A76E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB48E97294B204F002A76E6 /* SceneDelegate.swift */; };
 		BAB48E9A294B204F002A76E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB48E99294B204F002A76E6 /* ViewController.swift */; };
-		BAB48E9D294B204F002A76E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB48E9B294B204F002A76E6 /* Main.storyboard */; };
 		BAB48E9F294B2050002A76E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB48E9E294B2050002A76E6 /* Assets.xcassets */; };
 		BAB48EA2294B2050002A76E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB48EA0294B2050002A76E6 /* LaunchScreen.storyboard */; };
+		BAB48EAB294B28D5002A76E6 /* MonopolyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB48EAA294B28D5002A76E6 /* MonopolyManager.swift */; };
+		BAB48EAE294B5B77002A76E6 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB48EAD294B5B77002A76E6 /* CardsView.swift */; };
+		BAB48EB1294B720A002A76E6 /* UICollectionViewFlowLaout+displacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB48EB0294B720A002A76E6 /* UICollectionViewFlowLaout+displacement.swift */; };
+		BADB77B9294B923900453337 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB77B8294B923900453337 /* CardCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,13 @@
 		BAB48E95294B204F002A76E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB48E97294B204F002A76E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BAB48E99294B204F002A76E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BAB48E9C294B204F002A76E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAB48E9E294B2050002A76E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB48EA1294B2050002A76E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB48EA3294B2050002A76E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB48EAA294B28D5002A76E6 /* MonopolyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonopolyManager.swift; sourceTree = "<group>"; };
+		BAB48EAD294B5B77002A76E6 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		BAB48EB0294B720A002A76E6 /* UICollectionViewFlowLaout+displacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLaout+displacement.swift"; sourceTree = "<group>"; };
+		BADB77B8294B923900453337 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		BAB48E94294B204F002A76E6 /* Monopoly */ = {
 			isa = PBXGroup;
 			children = (
+				BAB48EA9294B28BB002A76E6 /* Monopoly */,
 				BAB48E95294B204F002A76E6 /* AppDelegate.swift */,
 				BAB48E97294B204F002A76E6 /* SceneDelegate.swift */,
 				BAB48E99294B204F002A76E6 /* ViewController.swift */,
-				BAB48E9B294B204F002A76E6 /* Main.storyboard */,
 				BAB48E9E294B2050002A76E6 /* Assets.xcassets */,
 				BAB48EA0294B2050002A76E6 /* LaunchScreen.storyboard */,
 				BAB48EA3294B2050002A76E6 /* Info.plist */,
 			);
 			path = Monopoly;
+			sourceTree = "<group>";
+		};
+		BAB48EA9294B28BB002A76E6 /* Monopoly */ = {
+			isa = PBXGroup;
+			children = (
+				BAB48EAF294B71D7002A76E6 /* Extensions */,
+				BAB48EAC294B3652002A76E6 /* Views */,
+				BAB48EAA294B28D5002A76E6 /* MonopolyManager.swift */,
+			);
+			path = Monopoly;
+			sourceTree = "<group>";
+		};
+		BAB48EAC294B3652002A76E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BAB48EAD294B5B77002A76E6 /* CardsView.swift */,
+				BADB77B8294B923900453337 /* CardCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BAB48EAF294B71D7002A76E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAB48EB0294B720A002A76E6 /* UICollectionViewFlowLaout+displacement.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +160,6 @@
 			files = (
 				BAB48EA2294B2050002A76E6 /* LaunchScreen.storyboard in Resources */,
 				BAB48E9F294B2050002A76E6 /* Assets.xcassets in Resources */,
-				BAB48E9D294B204F002A76E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB48EB1294B720A002A76E6 /* UICollectionViewFlowLaout+displacement.swift in Sources */,
+				BAB48EAB294B28D5002A76E6 /* MonopolyManager.swift in Sources */,
+				BADB77B9294B923900453337 /* CardCell.swift in Sources */,
+				BAB48EAE294B5B77002A76E6 /* CardsView.swift in Sources */,
 				BAB48E9A294B204F002A76E6 /* ViewController.swift in Sources */,
 				BAB48E96294B204F002A76E6 /* AppDelegate.swift in Sources */,
 				BAB48E98294B204F002A76E6 /* SceneDelegate.swift in Sources */,
@@ -147,14 +183,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BAB48E9B294B204F002A76E6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BAB48E9C294B204F002A76E6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BAB48EA0294B2050002A76E6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,9 +320,9 @@
 				INFOPLIST_FILE = Monopoly/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +330,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elsa.Monopoly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,9 +351,9 @@
 				INFOPLIST_FILE = Monopoly/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +361,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elsa.Monopoly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
