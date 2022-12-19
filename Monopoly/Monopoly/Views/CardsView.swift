@@ -18,12 +18,7 @@ class CardsView: UICollectionView {
     
     let len = 1001
     
-    private let layout: UICollectionViewFlowLayout = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 5.0
-        return layout
-    }()
+    private let layout = CardsLayout() 
     
     init () {
         super.init(frame: .zero, collectionViewLayout: layout)
@@ -54,7 +49,7 @@ class CardsView: UICollectionView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError()
+        super.init(coder: coder)
     }
     
     @objc
@@ -97,25 +92,6 @@ extension CardsView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        print("scroll", scrollView.contentOffset)
-        
-        let new = getCloseItemToCenter().item
-        if new == currIndex {
-            print("is here")
-        } else {
-            print("out there")
-            
-            print(currIndex, new)
-            let prev = CardCell.dequeue(from: self, at: IndexPath(item: currIndex, section: 0))
-            let curr = CardCell.dequeue(from: self, at: IndexPath(item: new, section: 0))
-            prev.restore()
-            curr.animateCell()
-            currIndex = new
-        }
-        
     }
 }
 
