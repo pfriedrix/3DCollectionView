@@ -44,17 +44,32 @@ class CardCell: UICollectionViewCell {
         
         contentView.addSubview(label)
         contentView.addSubview(imageView)
-        contentView.layer.shadowColor = UIColor.red.cgColor
-        contentView.layer.shadowOpacity = 1
-        contentView.layer.shadowOffset = .init(width: 0, height: 7)
-        contentView.layer.shadowRadius = 7
         contentView.layer.borderWidth = 2
         contentView.layer.borderColor = UIColor.black.cgColor
         contentView.backgroundColor = .red
         contentView.layer.shouldRasterize = true
         contentView.layer.rasterizationScale = UIScreen.main.scale
-        contentView.transform3D = CATransform3DRotate(contentView.transform3D, .pi / 3, 1, 0, 0)
+        
+        contentView.layer.shadowColor = UIColor.red.cgColor
+        contentView.layer.shadowOpacity = 1
+        contentView.layer.shadowOffset = .init(width: 0, height: 7)
+        contentView.layer.shadowRadius = 7
         
         return label
+    }
+    
+    func animateCell() {
+        UIView.animate(withDuration: 0.2) { [ weak self ] in
+            self?.contentView.layer.shadowOpacity = 0
+            let tranform = CATransform3DMakeTranslation(0, 10, -10)
+            self?.contentView.layer.transform = tranform
+        }
+    }
+    
+    func restore() {
+        UIView.animate(withDuration: 0.2) { [ weak self ] in
+            self?.contentView.layer.shadowOpacity = 1
+            self?.contentView.layer.transform = CATransform3DIdentity
+        }
     }
 }

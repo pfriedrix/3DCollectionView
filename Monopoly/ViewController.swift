@@ -19,9 +19,9 @@ class ViewController: UIViewController {
         view.addSubview(cardsView)
         view.addConstraints([
             cardsView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            cardsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            cardsView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            cardsView.heightAnchor.constraint(equalToConstant: 200),
+            cardsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -100),
+            cardsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 100),
+            cardsView.heightAnchor.constraint(equalToConstant: 250),
         ])
     }
     
@@ -29,3 +29,4 @@ class ViewController: UIViewController {
         cardsView.scrollToCenter()
     }
 }
+
